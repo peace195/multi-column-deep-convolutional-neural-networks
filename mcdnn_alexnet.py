@@ -245,8 +245,8 @@ def run_model(train_path, test_path):
         
         coord = tf.train.Coordinator()
         threads = tf.train.start_queue_runners(coord=coord)
-        saver.restore(session, './mcdnn_alexnet_plant50.ckpt')
-        '''
+        #saver.restore(session, './mcdnn_alexnet_plant50.ckpt')
+
         try:
             step = 0
             while True:
@@ -260,7 +260,7 @@ def run_model(train_path, test_path):
               print('Done training')
         
         saver.save(session, './mcdnn_alexnet_plant50.ckpt')
-        '''
+
         test_ret_topk = [0.0] * 49
         test_count = 0
         try:
